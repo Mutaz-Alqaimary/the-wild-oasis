@@ -5,6 +5,10 @@ const StyledFormRow = styled.div`
   flex-direction: column;
   gap: 0.8rem;
   padding: 1.2rem 0;
+
+  @media (max-width: 37.5em) {
+    padding: 1rem 0;
+  }
 `;
 
 const Label = styled.label`

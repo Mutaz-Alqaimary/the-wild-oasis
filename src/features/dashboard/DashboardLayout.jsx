@@ -11,7 +11,7 @@ import TodayActivity from "../check-in-out/TodayActivity";
 const StyledDashboardLayout = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: auto minmax(34rem, auto) auto;
+  /* grid-template-rows: auto minmax(34rem, auto) auto; */
   gap: 2.4rem;
   min-width: 0;
 

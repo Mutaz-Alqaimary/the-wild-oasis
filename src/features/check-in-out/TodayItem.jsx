@@ -21,8 +21,8 @@ const StyledTodayItem = styled.li`
   }
 
   @media (max-width: 37.5em) {
-    grid-template-columns: auto 2rem minmax(0, 1fr);
-    gap: 0.8rem 1.2rem;
+    grid-template-columns: auto 2rem auto minmax(0, 1fr);
+    gap: 1rem 1.2rem;
     font-size: 1.3rem;
     padding: 1rem 0;
   }
@@ -37,10 +37,21 @@ const StyledTodayItem = styled.li`
   }
 
   @media (max-width: 37.5em) {
+    & > a,
+    & > button {
+      grid-column: 1 / -1;
+      justify-self: stretch;
+    }
+  }
+
+  @media (max-width: 22em) {
     & > div:nth-child(4) {
       grid-column: 2 / 4;
     }
+  }
 
+  @media (min-width: 75em) and (max-width: 87.5em) {
+    grid-template-columns: auto 2rem auto minmax(0, 1fr);
     & > a,
     & > button {
       grid-column: 1 / -1;

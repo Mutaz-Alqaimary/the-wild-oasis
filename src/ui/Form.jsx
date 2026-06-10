@@ -5,6 +5,7 @@ const Form = styled.form`
     props.type === "regular" &&
     css`
       padding: 2.4rem 4rem;
+      width: 100%;
 
       /* Box */
       background-color: var(--color-grey-0);
@@ -36,6 +37,7 @@ const Form = styled.form`
     
   overflow: hidden;
   font-size: 1.4rem;
+  min-width: 0;
   max-width: 100%;
 
   @media (max-width: 37.5em) {
