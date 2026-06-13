@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import { Link, Navigate } from "react-router-dom";
 
-import LoginForm from "../features/authentication/LoginForm";
+import SignupForm from "../features/authentication/SignupForm";
 import { useUser } from "../features/authentication/useUser";
 import Logo from "../ui/Logo";
 import Heading from "../ui/Heading";
 import Spinner from "../ui/Spinner";
 
-const LoginLayout = styled.main`
+const SignupLayout = styled.main`
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(0, 48rem);
+  grid-template-columns: minmax(0, 48em);
   align-content: center;
   justify-content: center;
   gap: 3.2rem;
@@ -38,22 +38,22 @@ const AuthSwitch = styled.p`
   }
 `;
 
-function Login() {
+function Signup() {
   const { isLoading, isAuthenticated } = useUser();
 
   if (isLoading) return <Spinner />;
   if (isAuthenticated) return <Navigate replace to="/dashboard" />;
 
   return (
-    <LoginLayout>
+    <SignupLayout>
       <Logo />
-      <Heading as="h4">Log in to your account</Heading>
-      <LoginForm />
+      <Heading as="h4">Create your account</Heading>
+      <SignupForm />
       <AuthSwitch>
-        Don&apos;t have an account? <Link to="/signup">Create one</Link>
+        Already have an account? <Link to="/login">Log in</Link>
       </AuthSwitch>
-    </LoginLayout>
+    </SignupLayout>
   );
 }
 
-export default Login;
+export default Signup;
