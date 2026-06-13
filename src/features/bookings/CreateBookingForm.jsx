@@ -18,13 +18,18 @@ import { useEffect } from "react";
 import { useCreateBooking } from "./useCreateBooking";
 
 const GuestSelectGroup = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto;
   align-items: center;
   gap: 2.4rem;
 
   @media (max-width: 62em) {
+    grid-template-rows: auto auto;
     gap: 1.2rem;
-    flex-wrap: wrap;
+    & > :last-child {
+      grid-row: 2;
+    }
   }
 
   @media (max-width: 37.5em) {

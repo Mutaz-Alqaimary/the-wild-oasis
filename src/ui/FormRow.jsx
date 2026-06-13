@@ -3,13 +3,8 @@ import styled from "styled-components";
 const StyledFormRow = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: minmax(auto, 24rem) minmax(auto, 1fr) minmax(
-      auto,
-      1.2fr
-    );
-  /* grid-template-columns: 24rem 1fr 1.2fr; */
+  grid-template-columns: minmax(14rem, 0.7fr) minmax(0, 1fr);
   gap: 2.4rem;
-
   padding: 1.2rem 0;
   min-width: 0;
 
@@ -36,7 +31,6 @@ const StyledFormRow = styled.div`
   }
 
   @media (max-width: 62em) {
-    grid-template-columns: minmax(14rem, 0.7fr) minmax(0, 1fr);
     gap: 1.2rem 1.6rem;
 
     & > span:last-child {
